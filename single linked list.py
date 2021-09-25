@@ -57,6 +57,15 @@ class LinkedList:
                  break
             itr=itr.next
             count+=1
+    def search(self,data):
+        itr=self.head
+        index=0
+        while(itr):
+            if data==itr.data:
+                return index
+            itr=itr.next
+            index+=1
+
 ll=LinkedList()
 ll.insertmultiple_values(list(map(int,input().split())))
 ll.insert_at(3,10)
@@ -65,3 +74,4 @@ ll.print()
 ll.removefirst()
 ll.remove_at(3)
 ll.print()
+print(ll.search(3))
